@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Student Tracking System</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo">
+            <h2>GMIT</h2>
+            <p>Gargi Memorial Institute of Technology</p>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form">
+        <div class="left-box">
+            <div class="left">
+                <div class="down">
+                    <img src="logo_white.png">
+                    <h2>Welcome</h2>
+                    <h5>You don't have any account!</h5>
+                    <a href="signup.html"><button type="submit" class="btn">Sign Up</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="space">
+                <div class="button-box">
+                    <button type="button" class="toggle-btn" onclick="S()">Student</button>
+                    <button type="button" class="toggle-btn" onclick="F()">Faculty</button>
+                    <button type="button" class="toggle-btn" onclick="C()">CDC</button>
+                    <hr id="line">
+                </div>
+
+                <form id="student-form">
+                    <h2>Login as a Student</h2>
+                    <input type="email" class="form-control" placeholder="Your Email *" name="sEmail" value="" required>
+                    <input type="password" class="form-control" placeholder="Password *" name="sPassword" value=""
+                        required>
+                    <a href="#">Forget
+                        password?</a><br>
+                    <div>
+                        <button type="submit" class="regBtn">Sign In</button>
+                    </div>
+                </form>
+                <form id="faculty-form">
+                    <h2>Login as a Faculty</h2>
+                    <input type="email" class="form-control" placeholder="Your Email *" name="sEmail" value="" required>
+                    <input type="password" class="form-control" placeholder="Password *" name="sPassword" value=""
+                        required>
+                    <a href="#" >Forget
+                        password?</a><br>
+                    <div>
+                        <button type="submit" class="regBtn">Sign In</button>
+                    </div>
+                </form>
+                <form id="cdc-form">
+                    <h2>Login as CDC</h2>
+                    <input type="email" class="form-control" placeholder="Your Email *" name="sEmail" value="" required>
+                    <input type="password" class="form-control" placeholder="Password *" name="sPassword" value=""
+                        required>
+                    <a href="#">Forget
+                        password?</a><br>
+                    <div>
+                        <button type="submit" class="regBtn">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        function S() {
+
+            var Student = document.getElementById("student-form");
+            var Faculty = document.getElementById("faculty-form");
+            var CDC = document.getElementById("cdc-form");
+            var line = document.getElementById("line");
+
+
+            Student.style.transform = "translateX(0px)";
+            Faculty.style.transform = "translateX(1000px)";
+            CDC.style.transform = "translateX(2000px)";
+            line.style.transform = "translateX(0px)";
+        }
+        function F() {
+            var Student = document.getElementById("student-form");
+            var Faculty = document.getElementById("faculty-form");
+            var CDC = document.getElementById("cdc-form");
+            var line = document.getElementById("line");
+
+            Student.style.transform = "translateX(-1000px)";
+            Faculty.style.transform = "translateX(0px)";
+            CDC.style.transform = "translateX(1000px)";
+            line.style.transform = "translateX(115px)";
+        }
+        function C() {
+            var Student = document.getElementById("student-form");
+            var Faculty = document.getElementById("faculty-form");
+            var CDC = document.getElementById("cdc-form");
+            var line = document.getElementById("line");
+
+            Student.style.transform = "translateX(-2000px)";
+            Faculty.style.transform = "translateX(-1000px)";
+            CDC.style.transform = "translateX(0px)";
+            line.style.transform = "translateX(230px)";
+        }
+    </script>
+    
+</body>
+
+</html>
